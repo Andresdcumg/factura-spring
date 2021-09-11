@@ -1,8 +1,8 @@
 package com.wtorresd1.Facturass.model;
 
-import javax.persistence.*;
-
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "detalleFactura")
@@ -12,10 +12,10 @@ public class DetalleFactura {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idDetFact;
 
-    @Column(name = "idProducto", nullable = false)
+    @Column(name = "id_producto", nullable = false)
     private long idProducto;
 
-    @Column(name = "idFactura", nullable = false)
+    @Column(name = "id_factura", nullable = false)
     private long idFactura;
 
     @Column(name = "producto", nullable = false)

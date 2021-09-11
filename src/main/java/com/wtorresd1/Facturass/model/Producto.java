@@ -1,19 +1,19 @@
 package com.wtorresd1.Facturass.model;
 
-import java.util.Date;
-import javax.persistence.*;
-
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "producto")
 @EntityListeners(AuditingEntityListener.class)
 public class Producto {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idProducto;
 
-    @Column(name = "Nombre", nullable = false)
+    @Column(name = "nombre", nullable = false)
     private String nombre;
 
     @Column(name = "vence", nullable = false)
